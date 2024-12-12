@@ -1,4 +1,5 @@
 {
     "python.defaultInterpreterPath": "C:\\Users\\stanv\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
+    "emmet.includeLanguages": {"django-html": "html"}
 }
