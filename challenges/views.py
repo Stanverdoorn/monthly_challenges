@@ -5,27 +5,22 @@ from django.template.loader import render_to_string
 
 # Create your views here.
 
-def index(requests):
-    list_items = ""
+def index(request):
     months = list(monthly_challenges.keys())
 
-    for month in months:
-        capitalized_month = month.capitalize()
-        month_path = reverse("month-challenge", args=[month])
-        list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a></li>"
-
-    response_data = f"<ul>{list_items}</ul>"   
-    return HttpResponse(response_data)
+    return render(request, "challenges/index.html", {
+        "months": months
+    })
 
 monthly_challenges = {
-    "january": "January challenge",
-    "february": "February challenge",
-    "march": "March challenge",
-    "april": "April challenge",
-    "may": "May challenge",
-    "june": "June challenge",
-    "july": "July challenge",
-    "august": "August challenge",
+    "january": "Janus challenge",
+    "february": "Februus challenge",
+    "march": "Mars challenge",
+    "april": "Aperire challenge",
+    "may": "Maia challenge",
+    "june": "Juno challenge",
+    "july": "Julius challenge",
+    "august": "Augustus challenge",
     "september": "September challenge",
     "october": "October challenge",
     "november": "November challenge",
