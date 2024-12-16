@@ -24,7 +24,7 @@ monthly_challenges = {
     "september": "September challenge",
     "october": "October challenge",
     "november": "November challenge",
-    "december": "December challenge"
+    "december": None
 }
 
 def monthly_challenge_by_number(request, month):
